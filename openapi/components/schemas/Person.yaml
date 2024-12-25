@@ -1,0 +1,37 @@
+type: object
+required:
+  - id
+  - name
+  - surname
+  - job
+properties:
+  id:
+    type: integer
+    format: int64
+    readOnly: true
+    description: Id of person
+  name:
+    type: string
+    description: Name of person
+  surname:
+    type: string
+    description: Surname of person
+  birthdate:
+    type: string
+    format: date
+    description: Birth date of person
+  biography:
+    type: string
+    description: Biography of person
+  job:
+    type: string
+    enum:
+      - actor
+      - directoir
+      - screenwriter
+      - producer
+    description: Job in industry
+  Filmography:
+    type: array
+    items:
+      $ref: './Film.yaml'

@@ -1,0 +1,69 @@
+get:
+  summary: Get film by ID
+  security:
+    - Auth: []
+  tags:
+    - Films
+  parameters:
+    - name: filmsId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: Return film
+      content:
+        application/json:
+          schema:
+            items:
+              $ref: '../components/schemas/Film.yaml'
+    '404':
+      description: Can't find the film
+      $ref: '../components/responses/Message.yaml'
+put:
+  summary: Update an existing film
+  security:
+    - Auth: []
+  tags:
+    - Films
+  parameters:
+    - name: filmsId
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/Film.yaml'
+  responses:
+    '200':
+      description: Film updated successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Film.yaml'
+    '404':
+      description: Can't find the film
+      $ref: '../components/responses/Message.yaml'
+delete:
+  summary: Delete the film
+  security:
+    - Auth: []
+  tags:
+    - Films
+  parameters:
+    - name: filmsId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '204':
+      description: Film deleted successfully
+    '404':
+      description: Can't find the film
+      $ref: '../components/responses/Message.yaml'

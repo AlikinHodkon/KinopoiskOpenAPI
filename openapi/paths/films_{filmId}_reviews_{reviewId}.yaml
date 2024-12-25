@@ -1,0 +1,24 @@
+delete:
+  summary: Delete a review by FilmId
+  security:
+    - Auth: []
+  tags:
+    - Films
+    - Reviews
+  parameters:
+    - name: filmId
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: reviewId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '204':
+      description: Review deleted successfully
+    '404':
+      description: Review not found
+      $ref: '../components/responses/Message.yaml'

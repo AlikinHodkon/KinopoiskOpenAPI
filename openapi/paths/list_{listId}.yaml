@@ -1,0 +1,41 @@
+get:
+  summary: Get films from list
+  security:
+    - Auth: []
+  tags:
+    - Lists
+    - Films
+  parameters:
+    - name: listId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: Films from list
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/FilmList.yaml'
+    '404':
+      description: List not found
+      $ref: '../components/responses/Message.yaml'
+delete:
+  summary: Delete list
+  security:
+    - Auth: []
+  tags:
+    - Lists
+  parameters:
+    - name: listId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '204':
+      description: Delete list succesfully
+    '404':
+      description: List not found
+      $ref: '../components/responses/Message.yaml'

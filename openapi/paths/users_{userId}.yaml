@@ -1,0 +1,75 @@
+get:
+  summary: Get user by ID
+  security:
+    - Auth: []
+  tags:
+    - Users
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: User details
+      security:
+        - main_auth:
+          - 'read:users'
+          - 'write:users'      
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/User.yaml'
+    '404':
+      description: User not found
+      $ref: '../components/responses/Message.yaml'
+put:
+  summary: Update user's password
+  security:
+    - Auth: []
+  tags:
+    - Users
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/User.yaml'
+  responses:
+    '200':
+      description: User updated successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/User.yaml'
+    '404':
+      description: User not found
+      $ref: '../components/responses/Message.yaml'
+delete:
+  summary: Delete a user
+  security:
+    - Auth: []
+  security:
+    - Auth: []
+  tags:
+    - Users
+  parameters:
+    - name: userId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '204':
+      description: User deleted successfully
+    '404':
+      description: User not found
+      $ref: '../components/responses/Message.yaml'
+          

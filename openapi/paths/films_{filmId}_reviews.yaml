@@ -1,0 +1,42 @@
+get:
+  summary: Get reviews for the film
+  security:
+    - Auth: []
+  tags:
+    - Films
+    - Reviews
+  parameters:
+    - name: filmId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: List of reviews for the film
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Review.yaml'
+post:
+  summary: Create a review for the film
+  security:
+    - Auth: []
+  tags:
+    - Films
+    - Reviews
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/Review.yaml'
+  responses:
+    '201':
+      description: Review created successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Review.yaml'

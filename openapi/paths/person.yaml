@@ -1,0 +1,15 @@
+get:
+  summary: Get all Persons
+  security:
+    - Auth: []
+  tags:
+    - Persons
+  responses:
+    '200':
+      description: All persons
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Person.yaml'

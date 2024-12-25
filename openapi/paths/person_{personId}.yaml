@@ -1,0 +1,66 @@
+get:
+  summary: Get post by ID
+  security:
+    - Auth: []
+  tags:
+    - Persons
+  parameters:
+    - name: personId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: Person information
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Person.yaml'
+    '404':
+      description: Can't find person with this id
+put:
+  summary: Update information about an existing person
+  security:
+    - Auth: []
+  tags:
+    - Persons
+  parameters:
+    - name: personId
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/Person.yaml'
+  responses:
+    '200':
+      description: Person updated successfully
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Person.yaml'
+    '404':
+      description: Can't find this person
+delete:
+  summary: Delete a person
+  security:
+    - Auth: []
+  tags:
+    - Persons
+  parameters:
+    - name: personId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '204':
+      description: Person deleted successfully
+    '404':
+      description: Can't find this person
+      $ref: '../components/responses/Message.yaml'

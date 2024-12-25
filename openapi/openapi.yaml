@@ -1,0 +1,49 @@
+openapi: 3.1.0
+info:
+  title: Kinopoisk API
+  description: API for Kinopoisk.
+  version: 1.0.0
+
+paths:
+  '/users':
+    $ref: ./paths/users.yaml
+
+  '/users/{userId}':
+    $ref: ./paths/users_{userId}.yaml
+    
+  '/user/{userId}/reviews':
+    $ref: ./paths/users_{userId}_reviews.yaml
+
+  '/user/{userId}/reviews/{reviewId}':
+    $ref: ./paths/users_{userId}_reviews_{reviewId}.yaml
+          
+  '/films':
+    $ref: ./paths/films.yaml
+  
+  '/films/{filmsId}':
+    $ref: ./paths/films_{filmsId}.yaml
+
+  '/films/{filmId}/reviews':
+    $ref: ./paths/films_{filmId}_reviews.yaml
+  
+  '/films/{filmId}/reviews/{reviewId}':
+    $ref: ./paths/films_{filmId}_reviews_{reviewId}.yaml
+
+  '/person':
+    $ref: ./paths/person.yaml
+            
+  '/person/{personId}':
+    $ref: ./paths/person_{personId}.yaml
+
+  '/list':
+    $ref: ./paths/list.yaml
+
+  '/list/{listId}':
+    $ref: ./paths/list_{listId}.yaml
+
+components:
+  securitySchemes:
+    Auth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
