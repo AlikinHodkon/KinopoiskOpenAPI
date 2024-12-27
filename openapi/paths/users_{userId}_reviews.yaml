@@ -24,4 +24,3 @@ get:
               $ref: '../components/schemas/Review.yaml'
     '404':
       description: User not found
-      $ref: '../components/responses/Message.yaml'

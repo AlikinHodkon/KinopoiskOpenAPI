@@ -22,4 +22,3 @@ delete:
       description: Review deleted successfully
     '404':
       description: Review not found
-      $ref: '../components/responses/Message.yaml'

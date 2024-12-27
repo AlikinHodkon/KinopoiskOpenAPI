@@ -21,7 +21,6 @@ get:
               $ref: '../components/schemas/Film.yaml'
     '404':
       description: Can't find the film
-      $ref: '../components/responses/Message.yaml'
 put:
   summary: Update an existing film
   security:
@@ -50,7 +49,6 @@ put:
             $ref: '../components/schemas/Film.yaml'
     '404':
       description: Can't find the film
-      $ref: '../components/responses/Message.yaml'
 delete:
   summary: Delete the film
   security:
@@ -69,4 +67,3 @@ delete:
       description: Film deleted successfully
     '404':
       description: Can't find the film
-      $ref: '../components/responses/Message.yaml'

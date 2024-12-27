@@ -65,4 +65,3 @@ delete:
       description: Person deleted successfully
     '404':
       description: Can't find this person
-      $ref: '../components/responses/Message.yaml'
