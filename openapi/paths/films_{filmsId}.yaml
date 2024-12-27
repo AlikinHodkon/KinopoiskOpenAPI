@@ -1,7 +1,8 @@
 get:
   summary: Get film by ID
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
   parameters:
@@ -24,7 +25,8 @@ get:
 put:
   summary: Update an existing film
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
   parameters:
@@ -52,7 +54,8 @@ put:
 delete:
   summary: Delete the film
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
   parameters:

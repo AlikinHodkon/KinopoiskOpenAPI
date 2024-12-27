@@ -1,7 +1,9 @@
 delete:
   summary: Delete a review by UserId
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
     - Reviews

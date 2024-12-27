@@ -1,7 +1,8 @@
 get:
   summary: Get reviews for the film
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
     - Reviews
@@ -23,7 +24,8 @@ get:
 post:
   summary: Create a review for the film
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
     - Reviews

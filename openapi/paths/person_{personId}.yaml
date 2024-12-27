@@ -1,7 +1,8 @@
 get:
   summary: Get post by ID
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Persons
   parameters:
@@ -22,7 +23,8 @@ get:
 put:
   summary: Update information about an existing person
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Persons
   parameters:

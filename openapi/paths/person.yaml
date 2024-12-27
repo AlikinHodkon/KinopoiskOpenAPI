@@ -1,7 +1,8 @@
 get:
   summary: Get all Persons
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Persons
   responses:

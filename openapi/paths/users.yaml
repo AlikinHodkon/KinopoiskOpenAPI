@@ -1,7 +1,9 @@
 get:
   summary: Get all users
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
   responses:
@@ -16,7 +18,9 @@ get:
 post:
   summary: Create a new user
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
   requestBody:

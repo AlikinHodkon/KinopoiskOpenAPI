@@ -1,7 +1,8 @@
 get:
   summary: Get all lists
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Lists
   responses:
@@ -16,7 +17,8 @@ get:
 post:
   summary: Add list
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Lists
   requestBody:

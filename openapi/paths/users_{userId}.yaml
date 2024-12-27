@@ -1,7 +1,9 @@
 get:
   summary: Get user by ID
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
   parameters:
@@ -27,7 +29,9 @@ get:
 put:
   summary: Update user's password
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
   parameters:
@@ -55,9 +59,9 @@ put:
 delete:
   summary: Delete a user
   security:
-    - Auth: []
-  security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
   parameters:

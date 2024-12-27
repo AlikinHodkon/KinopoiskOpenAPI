@@ -1,7 +1,8 @@
 get:
   summary: Get all films
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
   responses:
@@ -16,7 +17,8 @@ get:
 post:
   summary: Create a new film
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
   requestBody:

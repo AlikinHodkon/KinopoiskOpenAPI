@@ -1,7 +1,9 @@
 get:
   summary: Get reviews made by specified user
   security:
-    - Auth: []
+    - main_auth:
+      - 'read:users'
+      - 'write:users'
   tags:
     - Users
     - Reviews

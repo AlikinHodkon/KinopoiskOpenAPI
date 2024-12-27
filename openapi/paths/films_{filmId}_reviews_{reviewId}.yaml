@@ -1,7 +1,8 @@
 delete:
   summary: Delete a review by FilmId
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Films
     - Reviews

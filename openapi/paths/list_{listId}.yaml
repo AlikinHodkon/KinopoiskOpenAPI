@@ -24,7 +24,8 @@ get:
 delete:
   summary: Delete list
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Lists
   parameters:
