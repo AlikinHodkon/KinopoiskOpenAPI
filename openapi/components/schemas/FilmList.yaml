@@ -7,7 +7,9 @@ properties:
     format: int64
     readOnly: true
     description: Id of list
+  title:
+    type: string
   films: 
     type: array 
     items: 
-      $ref: './Film.yaml' 
+      type: integer

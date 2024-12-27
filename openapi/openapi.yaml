@@ -6,7 +6,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-    
+
 paths:
   '/users':
     $ref: ./paths/users.yaml
@@ -16,9 +16,6 @@ paths:
     
   '/user/{userId}/reviews':
     $ref: ./paths/users_{userId}_reviews.yaml
-
-  '/user/{userId}/reviews/{reviewId}':
-    $ref: ./paths/users_{userId}_reviews_{reviewId}.yaml
           
   '/films':
     $ref: ./paths/films.yaml
@@ -29,8 +26,8 @@ paths:
   '/films/{filmId}/reviews':
     $ref: ./paths/films_{filmId}_reviews.yaml
   
-  '/films/{filmId}/reviews/{reviewId}':
-    $ref: ./paths/films_{filmId}_reviews_{reviewId}.yaml
+  '/reviews/{reviewId}':
+    $ref: ./paths/reviews_{reviewId}.yaml
 
   '/person':
     $ref: ./paths/person.yaml

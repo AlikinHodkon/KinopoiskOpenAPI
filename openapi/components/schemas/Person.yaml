@@ -24,14 +24,16 @@ properties:
     type: string
     description: Biography of person
   job:
-    type: string
-    enum:
-      - actor
-      - directoir
-      - screenwriter
-      - producer
+    type: array
+    items:
+      type: string
+      enum:
+        - actor
+        - directoir
+        - screenwriter
+        - producer
     description: Job in industry
   Filmography:
     type: array
     items:
-      $ref: './Film.yaml'
+      type: integer

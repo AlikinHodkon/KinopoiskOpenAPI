@@ -12,12 +12,12 @@ properties:
     format: int64
     readOnly: true
     description: Id of review
-  id_film:
+  filmId:
     type: integer
     format: int64
     readOnly: true
     description: Id of reviewing film
-  id_user:
+  userId:
     type: integer
     format: int64
     readOnly: true

@@ -1,18 +1,11 @@
 delete:
-  summary: Delete a review by UserId
+  summary: Delete a review
   security:
-    - main_auth:
-      - 'read:users'
-      - 'write:users'
+    - api_key: []
+    - basic_auth: []
   tags:
-    - Users
     - Reviews
   parameters:
-    - name: userId
-      in: path
-      required: true
-      schema:
-        type: integer
     - name: reviewId
       in: path
       required: true

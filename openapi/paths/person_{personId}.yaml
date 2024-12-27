@@ -1,5 +1,5 @@
 get:
-  summary: Get post by ID
+  summary: Get person by ID
   security:
     - api_key: []
     - basic_auth: []

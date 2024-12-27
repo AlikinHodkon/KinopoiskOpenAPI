@@ -22,10 +22,26 @@ properties:
     type: string 
     format: date 
     description: Release date of Film
-  director: 
-    type: string 
-    description: Director of film
+  staff: 
+    type: array 
+    description: Staff of film
+    items:
+      type: object
+      required: 
+      - id
+      - job
+      properties:
+        id:
+          type: integer
+        job:
+          type: string
+          enum:
+            - actor
+            - directoir
+            - screenwriter
+            - producer
   rating: 
     type: number 
     format: float 
+    readOnly: true
     description: Rating of film 
