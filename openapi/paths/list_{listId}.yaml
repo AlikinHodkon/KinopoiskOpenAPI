@@ -1,7 +1,8 @@
 get:
   summary: Get films from list
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Lists
     - Films
@@ -18,6 +19,8 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/FilmList.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: List not found
 delete:
@@ -36,5 +39,7 @@ delete:
   responses:
     '204':
       description: Delete list succesfully
+    '401':
+      description: Unauthorized
     '404':
       description: List not found'

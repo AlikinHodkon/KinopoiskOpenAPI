@@ -14,6 +14,8 @@ get:
             type: array
             items:
               $ref: '../components/schemas/FilmList.yaml'
+    '401':
+      description: Unauthorized
 post:
   summary: Add list
   security:
@@ -36,3 +38,5 @@ post:
         application/json:
           schema:
             $ref: '../components/schemas/FilmList.yaml'
+    '401':
+      description: Unauthorized

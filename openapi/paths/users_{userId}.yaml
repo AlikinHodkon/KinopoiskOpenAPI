@@ -23,6 +23,8 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/User.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: User not found
 put:
@@ -52,6 +54,8 @@ put:
         application/json:
           schema:
             $ref: '../components/schemas/User.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: User not found
 delete:
@@ -71,6 +75,8 @@ delete:
   responses:
     '204':
       description: User deleted successfully
+    '401':
+      description: Unauthorized
     '404':
       description: User not found
           

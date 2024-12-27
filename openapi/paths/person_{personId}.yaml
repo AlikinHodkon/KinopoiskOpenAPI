@@ -18,6 +18,8 @@ get:
         application/json:
           schema:
             $ref: '../components/schemas/Person.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: Can't find person with this id
 put:
@@ -46,12 +48,15 @@ put:
         application/json:
           schema:
             $ref: '../components/schemas/Person.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: Can't find this person
 delete:
   summary: Delete a person
   security:
-    - Auth: []
+    - api_key: []
+    - basic_auth: []
   tags:
     - Persons
   parameters:
@@ -63,5 +68,7 @@ delete:
   responses:
     '204':
       description: Person deleted successfully
+    '401':
+      description: Unauthorized
     '404':
       description: Can't find this person

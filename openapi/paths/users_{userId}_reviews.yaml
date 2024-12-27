@@ -22,5 +22,7 @@ get:
             type: array
             items:
               $ref: '../components/schemas/Review.yaml'
+    '401':
+      description: Unauthorized
     '404':
       description: User not found

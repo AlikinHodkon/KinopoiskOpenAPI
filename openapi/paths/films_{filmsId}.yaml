@@ -65,5 +65,7 @@ delete:
   responses:
     '204':
       description: Film deleted successfully
+    '401':
+      description: Unauthorized
     '404':
       description: Can't find the film

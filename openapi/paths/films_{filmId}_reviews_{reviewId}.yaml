@@ -20,5 +20,7 @@ delete:
   responses:
     '204':
       description: Review deleted successfully
+    '401':
+      description: Unauthorized
     '404':
       description: Review not found
