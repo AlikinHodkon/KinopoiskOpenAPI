@@ -3,7 +3,10 @@ info:
   title: Kinopoisk API
   description: API for Kinopoisk.
   version: 1.0.0
-
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+    
 paths:
   '/users':
     $ref: ./paths/users.yaml
